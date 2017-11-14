@@ -1,3 +1,5 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk add --update bash zip
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
+    zip
